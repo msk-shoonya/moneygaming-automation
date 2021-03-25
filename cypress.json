@@ -1,0 +1,26 @@
+{
+  "testFiles": "**/*.spec.js",
+  "integrationFolder": "cypress/specs",
+  "supportFile": false,
+  "videosFolder": "results/videos",
+  "reporter": "cypress-multi-reporters",
+  "reporterEnabled": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "results/json",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "yyyymmdd_HHMMss"
+  },
+  "defaultCommandTimeout": 10000,
+  "requestTimeout": 10000,
+  "responseTimeout": 10000,
+  "blockHosts": ["support.gameaccountnetwork.com"],
+  "video": false,
+  "viewportWidth": 1366,
+  "viewportHeight": 992,
+  "retries": 1,
+  "env": {
+    "ENV": "qa"
+  }
+}

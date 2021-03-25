@@ -1,0 +1,27 @@
+{
+  "name": "moneygaming-automation",
+  "version": "1.0.0",
+  "description": "Automation tests for Moneygaming",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --headless -o configFile=cypress.json",
+    "precy:run": "del-cli results",
+    "prereport": "mochawesome-merge results/json/mocha*.json > results/json/consolidated-result.json",
+    "report": "marge results/json/consolidated-result.json -i -o results/html -p moneygaming-tests -f report -t \"Moneygaming Tests\"",
+    "test": "npm run cy:run"
+  },
+  "keywords": [
+    "Cypress"
+  ],
+  "author": "Shoonya Kumari",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.8.0",
+    "cypress-multi-reporters": "^1.4.0",
+    "del-cli": "^3.0.1",
+    "mocha": "^8.3.2",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}
